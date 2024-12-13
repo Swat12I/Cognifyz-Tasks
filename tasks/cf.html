@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="sstt.css">
+</head>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="https://i.pinimg.com/originals/84/9a/a4/849aa4f9883c3f0e5e560d2faede39de.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <div id="close" class="fas fa-times"></div>
+            <a href="#home" class="nav_item">Home</a>
+            <a href="#order" class="nav_item">Order Now</a>
+            <a href="#gift" class="nav_item">Gift Cards</a>
+            <a href="#shop" class="nav_item">Shop</a>
+            <a href="#cafe" class="nav_item">Cafe Menu</a>
+            <a href="#story" class="nav_item">Our Story</a>
+            <a href="#status" class="nav_item">Order Status</a>
+
+        </nav>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h1 class="title">Sip <span>into </span> the Holiday <span> Spirit</span> </h1>
+            <p class="description">Get your first drink for 50% off*</p>
+            <a href="#" class="btn">Download Today</a>
+        </div>
+
+        <div class="image">
+            <img src="https://th.bing.com/th/id/R.77151226fd8da4607a96b4cd945d5a8c?rik=AFDfxHU5xPFVHQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fcoffee-png-red-cup-of-coffee-png-picture-1074.png&ehk=haw6sjtUT2rhsVxmKHGyptEB6DcSTW9v2isdoasNb1w%3d&risl=&pid=ImgRaw&r=0" alt="" data-speed="-3" class="move">
+        </div>
+
+    </section>
+
+    <style>
+        #order {
+            padding: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #order.new-background {
+            background-color: #ff6f61; /* New background color */
+        }
+
+        @media (max-width: 768px) {
+            #order {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            #change-color-btn {
+                padding: 0.4rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="order">
+        <h2>Our Now</h2>
+        <div id="menu-items">
+            <!-- Dynamic menu items will be loaded here -->
+        </div>
+        <button id="change-color-btn">Change Background</button>
+    </section>
+
+    <script>
+        document.getElementById('change-color-btn').addEventListener('click', function() {
+            const orderSection = document.getElementById('order');
+            orderSection.classList.toggle('new-background');
+        });
+    </script>
+
+    <section id="gift">
+        <h2>About Us</h2>
+        <p>Welcome to Cognifyz Coffee Shop, where we serve the finest coffee and create a cozy atmosphere for all coffee lovers. Our passion for quality and community drives us to provide an exceptional experience every day.</p>
+    </section>
+
+    <section id="shop">
+        <h2>Special Offers</h2>
+        <div class="offer-item">
+            <h3>Happy Hour</h3>
+            <p>Enjoy 20% off on all orders from 3 PM to 5 PM!</p>
+        </div>
+        <div class="offer-item">
+            <h3>Free Coffee Monday</h3>
+            <p>Get a free cup of coffee with any meal purchase every Monday!</p>
+        </div>
+    </section>
+
+    <section id="cafe">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonial">
+            <p>"Cognifyz Coffee Shop is my go-to place for a relaxing cup of coffee. The atmosphere is perfect and the staff is incredibly friendly!"</p>
+            <p>- Alex R.</p>
+        </div>
+        <div class="testimonial">
+            <p>"I love the special offers and the quality of coffee. Highly recommended!"</p>
+            <p>- Jamie L.</p>
+        </div>
+    </section>
+
+    <section id="story">
+        <h2>Our Story</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quos! Quae necessitatibus velit rem nostrum voluptates enim maiores vel! Porro quasi obcaecati minima saepe vitae voluptates dolorem nemo mollitia nulla?</p>
+    </section>
+    <style>
+         /* Styles for the #status section */
+         #status {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        #status h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #contact-form label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        #contact-form input, #contact-form textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        #contact-form input:focus, #contact-form textarea:focus {
+            border-color: #87400b;
+            outline: none;
+        }
+
+        #contact-form button {
+            padding: 0.8rem 1.2rem;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact-form button:hover {
+            background-color: #e65a50;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <section id="status">
+        <h2>Status</h2>
+        <form id="contact-form"><b>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button></b>
+        </form>
+
+        <img src="C:\Users\HP\Desktop\tasks\pexels-photo-1749303.webp" alt="">
+    </section>
+
+    <footer>
+        <section class="footer">
+
+            <div class="box-container">
+    
+                <div class="box">
+                    <h3>about us</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio facilis consequuntur possimus aperiam ullam? Ex reiciendis facere sint vero nisi autem temporibus velit ratione incidunt! Reiciendis mollitia nisi minima molestias.</p>
+                </div>
+                <div class="box">
+                    <h3>branch locations</h3>
+                    <a href="#">india</a>
+                    <a href="#">USA</a>
+                    <a href="#">japan</a>
+                    <a href="#">france</a>
+                    <a href="#">australia</a>
+                </div>
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#">home</a>
+                    <a href="#">book</a>
+                    <a href="#">packages</a>
+                    <a href="#">services</a>
+                    <a href="#">gallery</a>
+                    <a href="#">review</a>
+                    <a href="#">contact</a>
+                </div>
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">twitter</a>
+                    <a href="#">linkedin</a>
+                </div>
+            </div>    
+        <h1 class="credit"> created by <span> Swati Chandola</span> | all rights reserved! </h1>
+        </section>
+    </footer>
+
+    <script src="cf.js"></script>
+</body>
+</html>
